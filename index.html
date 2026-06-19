@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brookstone Advisory — International Advisory Services</title>
-  <meta name="description" content="Brookstone Advisory is a Hong Kong-based firm providing international advisory services across corporate strategy, cross-border transactions, and regulatory navigation." />
+  <title>Brookstone Advisory — Corporate Financial & Advisory Services</title>
+  <meta name="description" content="Brookstone Advisory Limited is a Hong Kong-based firm providing corporate treasury, FX risk management, accounting advisory, and Web3 & blockchain finance advisory services." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -413,7 +413,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       background: var(--rule);
       border: 1px solid var(--rule);
@@ -465,6 +465,69 @@
       font-weight: 300;
       color: var(--ink-soft);
       line-height: 1.75;
+    }
+
+    .service-bullets {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .service-bullets li {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      list-style: none;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .service-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 10px;
+      top: 4px;
+    }
+
+    /* ── MARKETS ── */
+    #markets {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+    }
+
+    .markets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin-top: 0;
+      max-width: 900px;
+    }
+
+    .market-card {
+      background: var(--bg);
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .market-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .market-desc {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.6;
     }
 
     /* ── CONTACT ── */
@@ -665,7 +728,8 @@
       #hero { grid-template-columns: 1fr; }
       .hero-panel { display: none; }
       .hero-content { padding: 100px 48px 72px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .markets-grid { grid-template-columns: 1fr; max-width: 400px; }
     }
 
     @media (max-width: 768px) {
@@ -676,6 +740,7 @@
       .hero-content { padding: 80px 24px 64px; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .services-grid { grid-template-columns: 1fr; }
+      .markets-grid { grid-template-columns: 1fr; max-width: 100%; }
       .form-row { grid-template-columns: 1fr; }
       footer { padding: 24px; flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
@@ -694,6 +759,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#markets">Markets</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get in touch</a>
@@ -706,18 +772,19 @@
   <div class="nav-mobile" id="nav-mobile">
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#markets" onclick="closeMenu()">Markets</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-content">
-      <div class="hero-eyebrow">Hong Kong · International Advisory</div>
+      <div class="hero-eyebrow">Hong Kong · Global Corporate Advisory</div>
       <h1 class="hero-headline">
-        Navigating global<br>markets with<br><em>clarity</em> and precision.
+        Specialist advisory for<br>businesses operating<br>across the <em>globe.</em>
       </h1>
       <p class="hero-sub">
-        Brookstone Advisory partners with businesses and institutions to deliver strategic guidance across borders — from market entry to complex cross-border transactions.
+        Brookstone Advisory Limited is a Hong Kong-based firm with 30 years of combined experience, delivering expert advisory services in corporate treasury, FX risk management, accounting, and Web3 finance — to businesses wherever they operate in the world.
       </p>
       <div class="hero-actions">
         <a href="#services" class="btn-primary">Our services</a>
@@ -728,23 +795,23 @@
       <div class="hero-panel-label">Our capabilities</div>
       <div class="hero-panel-item">
         <div class="hero-panel-item-num">01</div>
-        <div class="hero-panel-item-title">Corporate Strategy & Market Entry</div>
-        <div class="hero-panel-item-desc">Rigorous analysis for businesses entering new geographies.</div>
+        <div class="hero-panel-item-title">Corporate Treasury Advisory</div>
+        <div class="hero-panel-item-desc">Optimising cash management, liquidity planning, and cross-border fund arrangements.</div>
       </div>
       <div class="hero-panel-item">
         <div class="hero-panel-item-num">02</div>
-        <div class="hero-panel-item-title">Cross-Border Transactions</div>
-        <div class="hero-panel-item-desc">M&A, joint ventures, and strategic partnerships across jurisdictions.</div>
+        <div class="hero-panel-item-title">FX Risk Management</div>
+        <div class="hero-panel-item-desc">Foreign exchange risk assessment and hedging strategy for international businesses.</div>
       </div>
       <div class="hero-panel-item">
         <div class="hero-panel-item-num">03</div>
-        <div class="hero-panel-item-title">Regulatory & Government Affairs</div>
-        <div class="hero-panel-item-desc">Navigating complex regulatory environments across Asia and beyond.</div>
+        <div class="hero-panel-item-title">Accounting Advisory</div>
+        <div class="hero-panel-item-desc">Financial reporting, management accounting, and process optimisation support.</div>
       </div>
       <div class="hero-panel-item">
         <div class="hero-panel-item-num">04</div>
-        <div class="hero-panel-item-title">Capital & Investment Advisory</div>
-        <div class="hero-panel-item-desc">Strategic capital raises and cross-border investment guidance.</div>
+        <div class="hero-panel-item-title">Web3 & Blockchain Finance</div>
+        <div class="hero-panel-item-desc">Specialist accounting and finance advisory for digital assets and blockchain enterprises.</div>
       </div>
     </div>
   </section>
@@ -753,33 +820,33 @@
   <section id="about">
     <div class="reveal">
       <div class="section-label">About us</div>
-      <h2 class="section-title">A trusted partner<br>across markets.</h2>
+      <h2 class="section-title">Independent expertise.<br>Real-world results.</h2>
       <div class="divider"></div>
     </div>
     <div class="about-grid reveal">
       <div class="about-body">
         <p>
-          Brookstone Advisory is a Hong Kong-based advisory firm with deep expertise in international markets. We work with multinational corporations, family offices, and emerging businesses seeking to operate, expand, or invest across borders.
+          Brookstone Advisory Limited is a Hong Kong-based professional advisory firm established to help businesses improve financial management efficiency, optimise capital deployment, and strengthen risk management capabilities.
         </p>
         <p>
-          Our team brings together decades of experience in corporate strategy, regulatory affairs, and cross-border transactions spanning Asia, Europe, and the Americas. We combine on-the-ground market knowledge with a global perspective — helping clients move decisively in complex environments.
+          Our directors bring a combined 30 years of hands-on experience in financial services and corporate advisory, having served clients across a broad range of industries and business sizes. Our expertise spans corporate treasury management, foreign exchange risk, cross-border fund arrangements, and financial planning.
         </p>
         <p>
-          We take a relationship-first approach: every engagement is built on candid counsel, rigorous analysis, and a genuine commitment to our clients' long-term success. We are fully independent — we carry no conflicts of interest and no hidden agendas.
+          We work with SMEs, import and export companies, cross-border businesses, technology firms, Web3 enterprises, and professional services companies across Hong Kong, Australia, and the United Kingdom. Every engagement is fully independent — we carry no conflicts of interest and no hidden agendas.
         </p>
       </div>
       <div class="about-stats">
         <div class="stat-item">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Years of combined advisory experience</div>
-        </div>
-        <div class="stat-item">
           <div class="stat-number">30+</div>
-          <div class="stat-label">Markets covered across four continents</div>
+          <div class="stat-label">Years of experience per director in financial & corporate advisory</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Independent — no conflicts, no hidden agendas</div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Markets served — Hong Kong, Australia, and the United Kingdom</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Core service areas covering treasury, FX, accounting, and Web3</div>
         </div>
       </div>
     </div>
@@ -791,9 +858,26 @@
       <div class="section-label">What we do</div>
       <h2 class="section-title">Our services.</h2>
       <div class="divider"></div>
-      <p>We offer a focused range of advisory services for organisations operating in or expanding into international markets. Every engagement is tailored — we do not offer off-the-shelf solutions.</p>
+      <p>We provide focused, specialist advisory services for businesses that need expert guidance on treasury, foreign exchange, accounting, and digital asset finance. Every engagement is tailored to the client's specific situation.</p>
     </div>
     <div class="services-grid">
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="8" width="28" height="20" rx="1"/>
+          <line x1="4" y1="14" x2="32" y2="14"/>
+          <line x1="10" y1="21" x2="16" y2="21"/>
+          <line x1="10" y1="25" x2="14" y2="25"/>
+        </svg>
+        <div class="service-name">Corporate Treasury Advisory</div>
+        <p class="service-desc">We help businesses optimise how they manage and deploy capital — improving financial efficiency and planning for growth.</p>
+        <ul class="service-bullets">
+          <li>Cash management and liquidity planning</li>
+          <li>Cross-border fund arrangement advisory</li>
+          <li>Working capital optimisation</li>
+          <li>Financial process improvement</li>
+        </ul>
+      </div>
 
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
@@ -802,67 +886,72 @@
           <path d="M18 4 C26 10 26 26 18 32"/>
           <line x1="4" y1="18" x2="32" y2="18"/>
         </svg>
-        <div class="service-name">Corporate Strategy & Market Entry</div>
-        <p class="service-desc">Rigorous market assessment, competitive positioning, and go-to-market planning for businesses entering new geographies or restructuring their international operations.</p>
+        <div class="service-name">Corporate FX Risk Management</div>
+        <p class="service-desc">We advise businesses exposed to foreign currency volatility on how to identify, assess, and manage their FX risk effectively.</p>
+        <ul class="service-bullets">
+          <li>FX risk exposure assessment</li>
+          <li>Hedging strategy recommendations</li>
+          <li>Multi-currency cash flow planning</li>
+          <li>FX policy design and review</li>
+        </ul>
       </div>
 
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="10" width="12" height="16" rx="1"/>
-          <rect x="20" y="10" width="12" height="16" rx="1"/>
-          <path d="M16 18 h4"/>
-          <path d="M22 14 l6 4 -6 4"/>
-          <path d="M14 14 l-6 4 6 4"/>
+          <path d="M8 28 V16 M14 28 V10 M20 28 V18 M26 28 V6"/>
+          <polyline points="6,12 12,8 18,14 28,4"/>
+          <polyline points="24,4 28,4 28,8"/>
         </svg>
-        <div class="service-name">Cross-Border Transactions</div>
-        <p class="service-desc">End-to-end advisory on mergers, acquisitions, joint ventures, and strategic partnerships across jurisdictions — from deal structuring to due diligence and negotiation support.</p>
+        <div class="service-name">Corporate Accounting Advisory</div>
+        <p class="service-desc">We support finance teams with financial reporting, management accounting, and the optimisation of accounting processes and controls.</p>
+        <ul class="service-bullets">
+          <li>Financial reporting support</li>
+          <li>Management accounting advisory</li>
+          <li>Accounting process optimisation</li>
+          <li>Internal controls and compliance guidance</li>
+        </ul>
       </div>
 
       <div class="service-card reveal">
         <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 4 L6 10 v8 c0 7 5 12 12 14 7-2 12-7 12-14 v-8 Z"/>
-          <polyline points="13,18 16,21 23,14"/>
+          <path d="M18 4 l4 8 9 1.5 -6.5 6.5 1.5 9 -8-4.5 -8 4.5 1.5-9 -6.5-6.5 9-1.5z"/>
         </svg>
-        <div class="service-name">Regulatory & Government Affairs</div>
-        <p class="service-desc">Guidance on navigating complex regulatory environments, licensing requirements, and government relations across Asia and beyond, with a focus on practical, actionable outcomes.</p>
+        <div class="service-name">Web3 & Blockchain Advisory</div>
+        <p class="service-desc">We provide specialist accounting and finance advisory for businesses operating in the digital asset and blockchain space — an area requiring dedicated expertise.</p>
+        <ul class="service-bullets">
+          <li>Digital asset financial management</li>
+          <li>Blockchain enterprise accounting</li>
+          <li>Web3 compliance and reporting</li>
+          <li>Token and crypto treasury advisory</li>
+        </ul>
       </div>
 
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="8" y1="28" x2="8" y2="18"/>
-          <line x1="14" y1="28" x2="14" y2="12"/>
-          <line x1="20" y1="28" x2="20" y2="16"/>
-          <line x1="26" y1="28" x2="26" y2="8"/>
-          <polyline points="6,14 12,10 18,13 28,6"/>
-          <polyline points="24,6 28,6 28,10"/>
-        </svg>
-        <div class="service-name">Capital & Investment Advisory</div>
-        <p class="service-desc">Supporting founders, family offices, and institutional investors in structuring capital raises, identifying strategic partners, and evaluating cross-border investment opportunities.</p>
-      </div>
+    </div>
+  </section>
 
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="18" cy="18" r="3"/>
-          <path d="M18 4 v4 M18 28 v4 M4 18 h4 M28 18 h4"/>
-          <path d="M8.5 8.5 l2.8 2.8 M24.7 24.7 l2.8 2.8 M27.5 8.5 l-2.8 2.8 M11.3 24.7 l-2.8 2.8"/>
-        </svg>
-        <div class="service-name">Risk & Geopolitical Analysis</div>
-        <p class="service-desc">In-depth assessments of political, regulatory, and macroeconomic risks affecting international business — helping clients anticipate change and build resilient strategies.</p>
+  <!-- MARKETS -->
+  <section id="markets">
+    <div class="reveal">
+      <div class="section-label">Where we work</div>
+      <h2 class="section-title">Our markets.</h2>
+      <div class="divider"></div>
+      <p style="font-size:15.5px; color:var(--ink-soft); line-height:1.85; max-width:560px; margin-bottom:48px;">
+        We currently serve corporate clients across Hong Kong, Australia, and the United Kingdom, with a vision to expand into further markets as we grow. Our focus is on businesses operating cross-border between Asia, Oceania, and Europe.
+      </p>
+    </div>
+    <div class="markets-grid reveal">
+      <div class="market-card">
+        <div class="market-name">Hong Kong</div>
+        <p class="market-desc">Our home base and primary market. We work with local SMEs, trading companies, and multinational businesses headquartered or operating in Hong Kong.</p>
       </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="18" cy="12" r="5"/>
-          <circle cx="8" cy="26" r="4"/>
-          <circle cx="28" cy="26" r="4"/>
-          <line x1="13" y1="15" x2="10" y2="22"/>
-          <line x1="23" y1="15" x2="26" y2="22"/>
-          <line x1="12" y1="26" x2="24" y2="26"/>
-        </svg>
-        <div class="service-name">Board & Executive Advisory</div>
-        <p class="service-desc">Confidential counsel to boards and senior leadership on strategic decisions, governance, and stakeholder management in complex, multi-jurisdictional environments.</p>
+      <div class="market-card">
+        <div class="market-name">Australia</div>
+        <p class="market-desc">We advise Australian businesses expanding into Asia, as well as Asia-based businesses with Australian operations or investment interests.</p>
       </div>
-
+      <div class="market-card">
+        <div class="market-name">United Kingdom</div>
+        <p class="market-desc">We support UK-based businesses with cross-border treasury and FX needs, and Hong Kong companies with existing operations or investment interests in the United Kingdom.</p>
+      </div>
     </div>
   </section>
 
@@ -874,7 +963,7 @@
         <h2 class="section-title">Let's talk.</h2>
         <div class="divider"></div>
         <p>
-          Whether you're exploring a new market, navigating a transaction, or seeking a trusted sounding board — we'd welcome the conversation. All enquiries are handled in strict confidence.
+          Whether you need help managing treasury risk, navigating foreign exchange exposure, or building out your accounting processes — we'd welcome the conversation. All enquiries are handled in strict confidence.
         </p>
         <div class="contact-details">
           <div class="contact-item">
@@ -891,7 +980,6 @@
             <span class="contact-item-label">Working hours</span>
             <span class="contact-item-value">Mon–Fri, 9:00–18:00 HKT (UTC+8)</span>
           </div>
-
         </div>
       </div>
       <div class="reveal">
@@ -926,12 +1014,10 @@
             <label for="service">Area of interest</label>
             <select id="service" name="service">
               <option value="">Select a service</option>
-              <option>Corporate Strategy &amp; Market Entry</option>
-              <option>Cross-Border Transactions</option>
-              <option>Regulatory &amp; Government Affairs</option>
-              <option>Capital &amp; Investment Advisory</option>
-              <option>Risk &amp; Geopolitical Analysis</option>
-              <option>Board &amp; Executive Advisory</option>
+              <option>Corporate Treasury Advisory</option>
+              <option>Corporate FX Risk Management</option>
+              <option>Corporate Accounting Advisory</option>
+              <option>Web3 &amp; Blockchain Advisory</option>
               <option>Other</option>
             </select>
           </div>
@@ -957,19 +1043,18 @@
     <div class="footer-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#markets">Markets</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-copy">© 2026 Brookstone Advisory Limited. All rights reserved.</div>
   </footer>
 
   <script>
-    // Nav shadow on scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 10);
     });
 
-    // Mobile menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('nav-mobile');
 
@@ -983,7 +1068,6 @@
       hamburger.classList.remove('open');
     }
 
-    // Scroll reveal
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -995,7 +1079,6 @@
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Stat number reveal
     const statObserver = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
@@ -1007,7 +1090,6 @@
 
     document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
 
-    // Contact form — Formspree AJAX submission
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
