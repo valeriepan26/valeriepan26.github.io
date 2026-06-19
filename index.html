@@ -12,14 +12,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink:        #1a1a1a;
-      --ink-soft:   #4a4a4a;
-      --ink-muted:  #888;
-      --rule:       #d8d2c8;
-      --bg:         #fafaf8;
-      --bg-card:    #f4f2ee;
-      --gold:       #b5933a;
-      --gold-light: #e8dcc4;
+      --ink:        #1B3D6B;
+      --ink-soft:   #2B527A;
+      --ink-muted:  #7A8F9E;
+      --rule:       #d0dae4;
+      --bg:         #F4F6F9;
+      --bg-card:    #e8eef5;
+      --gold:       #5BAEE0;
+      --gold-light: #c2dff2;
       --white:      #ffffff;
     }
 
@@ -45,13 +45,13 @@
       justify-content: space-between;
       padding: 0 48px;
       height: 68px;
-      background: rgba(250,250,248,0.94);
+      background: rgba(244,246,249,0.96);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--rule);
       transition: box-shadow 0.3s;
     }
 
-    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(27,61,107,0.12); }
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
@@ -265,7 +265,7 @@
     .hero-panel {
       height: 100%;
       min-height: 100vh;
-      background: var(--bg-card);
+      background: #dce6f0;
       border-left: 1px solid var(--rule);
       display: flex;
       flex-direction: column;
@@ -510,7 +510,7 @@
     }
 
     .market-card {
-      background: var(--bg);
+      background: var(--white);
       padding: 40px 32px;
       text-align: center;
     }
@@ -532,8 +532,8 @@
 
     /* ── CONTACT ── */
     #contact {
-      background: var(--ink);
-      border-top: 1px solid #2a2a2a;
+      background: #1B3D6B;
+      border-top: 1px solid #16325a;
     }
 
     #contact .section-label { color: var(--gold); }
@@ -611,7 +611,7 @@
       border-radius: 0;
     }
 
-    .form-group select option { background: #1a1a1a; color: var(--white); }
+    .form-group select option { background: #1B3D6B; color: var(--white); }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
@@ -668,12 +668,12 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111;
+      background: #122950;
       padding: 28px 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid #222;
+      border-top: 1px solid #1B3D6B;
       flex-wrap: wrap;
       gap: 12px;
     }
@@ -683,7 +683,7 @@
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.6);
       text-decoration: none;
     }
 
